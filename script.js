@@ -101,13 +101,11 @@ function highh() {
     rightPop.classList.remove("hide")
     higherBtn.classList.add("hide")
     lowerBtn.classList.add("hide")
-    // leftImg.src = arrayOfCountries[rndm].flag;
     scoreColor();
     
 }
 
 function lowerr() {
-    // resultText.textContent = "Your answer is";
     resultText.classList.remove("hide")
     nextBtn.classList.remove("hide")
     resultVal.classList.remove("hide")
@@ -127,7 +125,6 @@ function lowerr() {
     higher.classList.add("hide")
     lowerBtn.classList.add("hide")
     scoreColor();
-    // leftImg.src = arrayOfCountries[rndm].flag;
 }
 
 function nextt() {
@@ -149,7 +146,8 @@ function nextt() {
     popu2 = Math.ceil(arrayOfCountries[rndm2].population / 100) * 100;
     console.log(rndm2)
     rightPop.textContent = popu2.toLocaleString('en-US');
-
+    rightImg.src = arrayOfCountries[rndm2].flag;
+    
 }
 
 play.addEventListener("click", loadd);
