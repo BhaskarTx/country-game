@@ -13,6 +13,7 @@ var resultText = document.querySelector("#resultt")
 let score = 0;
 let roundVal = 0;
 
+roundText.textContent = roundVal;
 scoreText.textContent = score;
 // const rightName = (rightt)=> {document.querySelector("#rightTitle").textContent = `${rightt}`};
 var play = document.querySelector("#play");
@@ -51,6 +52,21 @@ function loadd() {
     rightPop.textContent = popu2.toLocaleString('en-US');
 
 }
+function scoreColor(){
+    if(score>0){
+        scoreText.classList.add("green");
+        scoreText.classList.remove("wrong")
+    }
+    else if(score === 0){
+        scoreText.classList.remove("wrong")
+        scoreText.classList.remove("green")
+
+    }
+    else{
+        scoreText.classList.add("wrong")
+        scoreText.classList.remove("green")
+    }
+}
 
 function highh() {
     // resultText.textContent = "Your answer is";
@@ -72,7 +88,7 @@ function highh() {
     rightPop.classList.remove("hide")
     higherBtn.classList.add("hide")
     lowerBtn.classList.add("hide")
-    
+    scoreColor();
     
 }
 
@@ -96,6 +112,7 @@ function lowerr() {
     rightPop.classList.remove("hide")
     higher.classList.add("hide")
     lowerBtn.classList.add("hide")
+    scoreColor();
 }
 
 function nextt() {
