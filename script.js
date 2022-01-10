@@ -4,8 +4,10 @@ var leftPop = document.querySelector("#Lpopulation");
 var rightName = document.querySelector("#rightTitle");
 var rightPop = document.querySelector("#Rpopulation");
 var topText = document.querySelector(".top");
-var scoreText = document.querySelector(".score");
+var scoreText = document.querySelector(".scoreVal");
 
+var resultVal = document.querySelector("#stat")
+ 
 let score = 0;
 scoreText.textContent = score;
 // const rightName = (rightt)=> {document.querySelector("#rightTitle").textContent = `${rightt}`};
@@ -70,35 +72,55 @@ function loadd() {
 }
 
 function highh() {
+    resultVal.classList.remove("hide")
     if (popu2 > popu1) {
         score++;
         scoreText.textContent = score;
+        resultVal.textContent = "CORRECT"
+        resultVal.classList.remove("wrong")
     } else {
         score--;
         scoreText.textContent = score;
+        resultVal.textContent = "WRONG"
+        resultVal.classList.add("wrong")
     }
     rightPop.classList.remove("hide")
+    higherBtn.classList.add("hide")
+    lower.classList.add("hide")
+    
+    
 }
 
 function lowerr() {
+    resultVal.classList.remove("hide")
     if (popu2 < popu1) {
         score++;
         scoreText.textContent = score;
+        resultVal.textContent = "CORRECT"
+        resultVal.classList.remove("wrong")
     } else {
         score--;
         scoreText.textContent = score;
+        resultVal.textContent = "WRONG"
+        resultVal.classList.add("wrong")
     }
     rightPop.classList.remove("hide")
-
+    higher.classList.add("hide")
+    lowerBtn.classList.add("hide")
 }
 
 function nextt() {
+    resultVal.textContent = "";
+    higherBtn.classList.remove("hide")
+    lowerBtn.classList.remove("hide")
+
+    rightPop.classList.add("hide")
     rndm = rndm2;
     leftName.textContent = arrayOfCountries[rndm].name;
     popu1 = popu2;
     leftPop.textContent = popu1.toLocaleString('en-US');
     rndm2 = randomSelect();
-    leftName.textContent = arrayOfCountries[rndm2].name;
+    rightName.textContent = arrayOfCountries[rndm2].name;
     popu2 = Math.ceil(arrayOfCountries[rndm2].population / 100) * 100;
     console.log(rndm2)
     rightPop.textContent = popu2.toLocaleString('en-US');

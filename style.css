@@ -34,8 +34,13 @@ border: 2px solid blueviolet;
 }
 
 
+.status{
+    color: green;
 
-
+}
+.wrong {
+    color: red;
+}
 .btn {
     padding: .5rem;
     margin: 1rem;
