@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;800&display=swap" rel="stylesheet">
     <title>Country Game</title>
 </head>
+
 <body>
-    <div class="top hide">
-        <h2>Round Number : <span class="roundNumb"></span></h2>
-        <h2>Your Score : <span class="scoreVal"></span></h2>
+    <div class="topcontainer">
+        <h1 class="heading">IsPopulation ? Higher : Lower </h1>
+        <div class="top hide">
+            <h2>Round Number : <span class="roundNumb"></span></h2>
+            <h2>Your Score : <span class="scoreVal"></span></h2>
+        </div>
     </div>
-    <h2 id="resultt" class="hide"> Your answer is <span id="stat" class="green hide"></span></h2>
     <div class="container">
         <div class="leftBox box">
-            <!-- <img src="" alt=""> -->
+            <img src="" alt="" id="Limg" class="imagee hide">
             <h2 id="leftTitle"></h2>
             <p id="Lpopulation"></p>
 
         </div>
 
         <div class="rightBox box">
-            <!-- <img src="" alt=""> -->
+            <img src="" alt="" id="Rimg" class="imagee hide">
             <h2 id="rightTitle"></h2>
             <p id="Rpopulation"></p>
         </div>
 
     </div>
+    <h2 id="resultt" class="hide box"> Your answer is : &nbsp <span id="stat" class="green hide"></span></h2>
     <div class="box">
 
-        <button class="btn" id="play">Playyy !</button>
+        <button class="btn hide" id="play">Play</button>
         <button class="btn hide" id="higher">Higher</button>
         <button class="btn hide" id="lower">Lower</button>
         <button class="btn hide" id="next">Next</button>
@@ -39,4 +47,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
