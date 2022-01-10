@@ -50,13 +50,13 @@ var popu1;
 var popu2;
 
 function loadd() {
-    nextBtn.classList.add("hide")
+    // nextBtn.classList.add("hide")
     play.classList.add("hide");
     rightPop.classList.add("hide");
     higherBtn.classList.remove("hide")
     lowerBtn.classList.remove("hide")
     topText.classList.remove("hide")
-    nextBtn.classList.remove("hide")
+    // nextBtn.classList.remove("hide")
     rndm = randomSelect();
     rndm2 = randomSelect();
     leftName.textContent = arrayOfCountries[rndm].name;
@@ -73,6 +73,7 @@ function loadd() {
 }
 
 function highh() {
+    nextBtn.classList.remove("hide")
     resultVal.classList.remove("hide")
     if (popu2 > popu1) {
         score++;
@@ -93,6 +94,7 @@ function highh() {
 }
 
 function lowerr() {
+    nextBtn.classList.remove("hide")
     resultVal.classList.remove("hide")
     if (popu2 < popu1) {
         score++;
@@ -114,7 +116,7 @@ function nextt() {
     resultVal.textContent = "";
     higherBtn.classList.remove("hide")
     lowerBtn.classList.remove("hide")
-
+    nextBtn.classList.add("hide")
     rightPop.classList.add("hide")
     rndm = rndm2;
     leftName.textContent = arrayOfCountries[rndm].name;
