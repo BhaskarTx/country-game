@@ -50,6 +50,7 @@ var popu1;
 var popu2;
 
 function loadd() {
+    nextBtn.classList.add("hide")
     play.classList.add("hide");
     rightPop.classList.add("hide");
     higherBtn.classList.remove("hide")
@@ -86,7 +87,7 @@ function highh() {
     }
     rightPop.classList.remove("hide")
     higherBtn.classList.add("hide")
-    lower.classList.add("hide")
+    lowerBtn.classList.add("hide")
     
     
 }
