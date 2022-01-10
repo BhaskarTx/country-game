@@ -5,11 +5,14 @@ var rightName = document.querySelector("#rightTitle");
 var rightPop = document.querySelector("#Rpopulation");
 var topText = document.querySelector(".top");
 var scoreText = document.querySelector(".scoreVal");
+var roundText = document.querySelector(".roundNumb");
 
 var resultVal = document.querySelector("#stat")
 var resultText = document.querySelector("#resultt")
  
 let score = 0;
+let roundVal = 0;
+
 scoreText.textContent = score;
 // const rightName = (rightt)=> {document.querySelector("#rightTitle").textContent = `${rightt}`};
 var play = document.querySelector("#play");
@@ -56,15 +59,16 @@ function highh() {
     resultVal.classList.remove("hide")
     if (popu2 > popu1) {
         score++;
-        scoreText.textContent = score;
         resultVal.textContent = "CORRECT"
         resultVal.classList.remove("wrong")
     } else {
         score--;
-        scoreText.textContent = score;
         resultVal.textContent = "WRONG"
         resultVal.classList.add("wrong")
     }
+    roundVal++;
+    roundText.textContent = roundVal;
+    scoreText.textContent = score;
     rightPop.classList.remove("hide")
     higherBtn.classList.add("hide")
     lowerBtn.classList.add("hide")
@@ -79,15 +83,16 @@ function lowerr() {
     resultVal.classList.remove("hide")
     if (popu2 < popu1) {
         score++;
-        scoreText.textContent = score;
         resultVal.textContent = "CORRECT"
         resultVal.classList.remove("wrong")
     } else {
         score--;
-        scoreText.textContent = score;
         resultVal.textContent = "WRONG"
         resultVal.classList.add("wrong")
     }
+    roundVal++;
+    roundText.textContent = roundVal;
+    scoreText.textContent = score;
     rightPop.classList.remove("hide")
     higher.classList.add("hide")
     lowerBtn.classList.add("hide")
