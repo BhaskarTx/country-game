@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+height: 500px;
+border: 2px solid blueviolet;    
+}
+.box {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex: 50%;
+    border: 2px solid red;
+    
+}
+.leftbox {
+    background-color: aqua;
+
+}
+
+.rightbox {
+    background-color: chocolate;
+}
+
+
+
+
+
+
+
+
+.hide{
+    display: none;
+}
+
+
+
+
+.btn {
+    padding: .5rem;
+    margin: 1rem;
+    background-color: rgb(205, 152, 255);
+    border-radius: 1rem;
+}
