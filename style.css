@@ -31,10 +31,10 @@
 
 .floater {
     position: sticky;
-    top: 5vh;
-    left: 85vw;
+    top: 29vh;
+    left: 90vw;
     padding: 1rem;
-    font-size: 2.9rem;
+    font-size: 1.7rem;
 
 }
 
