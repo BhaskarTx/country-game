@@ -77,17 +77,17 @@ function loadd() {
 }
 function scoreColor(){
     if(score>0){
-        scoreText.classList.add("green");
+        scoreText.classList.add("correct");
         scoreText.classList.remove("wrong")
     }
     else if(score === 0){
         scoreText.classList.remove("wrong")
-        scoreText.classList.remove("green")
+        scoreText.classList.remove("correct")
 
     }
     else{
         scoreText.classList.add("wrong")
-        scoreText.classList.remove("green")
+        scoreText.classList.remove("correct")
     }
 }
 
@@ -126,7 +126,7 @@ function lowerr() {
         resultVal.classList.remove("wrong")
     } else {
         score--;
-        resultVal.textContent = "WRONG :(   "
+        resultVal.textContent = "WRONG :("
         resultVal.classList.add("wrong")
     }
     roundVal++;
