@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +14,13 @@
 
 <body>
     <div class="topcontainer">
-        <h1 class="heading">IsPopulation ? Higher : Lower </h1>
+        <span id="stat" class="correct floater"></span>
+        <h1 class="heading">IsPopulation ? <span class="correct">Higher</span>  : <span class="wrong">Lower</span>  </h1>
         <p class="centerr">Score more than 5 to <span class="lightt">WIN !</span>  
-            A score less than -1 will make you <span class="lightt">Lose :(</span> </p>
+            A score less than -2 will make you <span class="lightt">Lose :(</span> </p>
         <div class="top hide">
-            <h2>Round Number : <span class="roundNumb"></span></h2>
-            <h2>Your Score : <span class="scoreVal"></span></h2>
+            <h2><span class="green">Round Number : </span> <span class="roundNumb"></span></h2>
+            <h2> <span class="green"> Your Score :</span>  <span class="scoreVal"></span></h2>
         </div>
     </div>
     <div class="container">
@@ -44,24 +45,32 @@
                     <img src="" alt="" id="Rimg" class="imagee hide">
                 </li>
                 <li class="lists">
-                    <h2 id="rightTitle" class="darks"></h2>
+                    <h2 id="rightTitle"></h2>
                 </li>
                 <li class="lists">
-                    <p id="Rpopulation"></p>
+                    <p id="Rpopulation" class="darks boldd"></p>
                 </li>
             </ul>
         </div>
 
     </div>
-    <h2 id="resultt" class="hide box"> Your answer is &nbsp <span id="stat" class="green btnsBox hide"></span></h2>
-    <div class="btnsBox">
+    <div class="containerbottom whitebg" id="bottombox">
 
+        <div class="quesbox green hide" id="topques">
+            Is Population of <span id="rightCountry" class="correct">
+            </div>
+    <div class="btnsBox">
+        
         <button class="btn hide" id="play">Play</button>
         <button class="btn hide" id="higher">Higher</button>
         <button class="btn hide" id="lower">Lower</button>
         <button class="btn hide" id="next">Next</button>
     </div>
-
+    <div class="quesbox green hide" id="bottomques">
+        than <span id="leftCountry" class="correct"> </span> ? 
+        </div>
+        
+    </div>
 <!-- <footer>
     <div class="foot">
         All Rights Reserved @ionBain

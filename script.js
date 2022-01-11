@@ -2,17 +2,22 @@ var serverURL = "https://restcountries.com/v2/all?fields=name,population,area,fl
 var leftName = document.querySelector("#leftTitle");
 var leftPop = document.querySelector("#Lpopulation");
 var leftImg = document.querySelector("#Limg");
+var leftQues = document.querySelector("#leftCountry")
 
 var rightName = document.querySelector("#rightTitle");
 var rightPop = document.querySelector("#Rpopulation");
 var rightImg = document.querySelector("#Rimg");
+var rightQues = document.querySelector("#rightCountry")
+
+var topQues = document.querySelector("#topques")
+var bottomQues = document.querySelector("#bottomques")
+var bottomBox = document.querySelector("#bottombox")
 
 var topText = document.querySelector(".top");
 var scoreText = document.querySelector(".scoreVal");
 var roundText = document.querySelector(".roundNumb");
 
 var resultVal = document.querySelector("#stat")
-var resultText = document.querySelector("#resultt")
  
 let score = 0;
 let roundVal = 0;
@@ -44,6 +49,9 @@ var popu1;
 var popu2;
 
 function loadd() {
+    bottomBox.classList.remove("whitebg")
+    topQues.classList.remove("hide")
+    bottomQues.classList.remove("hide")
     // nextBtn.classList.add("hide")
     play.classList.add("hide");
     rightPop.classList.add("hide");
@@ -63,6 +71,8 @@ function loadd() {
     popu2 = Math.ceil(arrayOfCountries[rndm2].population / 100) * 100;
     rightPop.textContent = popu2.toLocaleString('en-US');
     rightImg.src = arrayOfCountries[rndm2].flag;
+    rightQues.textContent = arrayOfCountries[rndm2].name;
+    leftQues.textContent = arrayOfCountries[rndm].name;
     
 }
 function scoreColor(){
@@ -82,17 +92,16 @@ function scoreColor(){
 }
 
 function highh() {
-    // resultText.textContent = "Your answer is";
-    resultText.classList.remove("hide")
+
     nextBtn.classList.remove("hide")
     resultVal.classList.remove("hide")
     if (popu2 > popu1) {
         score++;
-        resultVal.textContent = "CORRECT"
+        resultVal.textContent = "CORRECT :)"
         resultVal.classList.remove("wrong")
     } else {
         score--;
-        resultVal.textContent = "WRONG"
+        resultVal.textContent = "WRONG :("
         resultVal.classList.add("wrong")
     }
     roundVal++;
@@ -101,22 +110,23 @@ function highh() {
     rightPop.classList.remove("hide")
     higherBtn.classList.add("hide")
     lowerBtn.classList.add("hide")
+    rightQues.textContent = arrayOfCountries[rndm2].name;
+    leftQues.textContent = arrayOfCountries[rndm].name;
     scoreColor();
     scoreCheck();
     
 }
 
 function lowerr() {
-    resultText.classList.remove("hide")
     nextBtn.classList.remove("hide")
     resultVal.classList.remove("hide")
     if (popu2 < popu1) {
         score++;
-        resultVal.textContent = "CORRECT"
+        resultVal.textContent = "CORRECT :)"
         resultVal.classList.remove("wrong")
     } else {
         score--;
-        resultVal.textContent = "WRONG"
+        resultVal.textContent = "WRONG :(   "
         resultVal.classList.add("wrong")
     }
     roundVal++;
@@ -125,6 +135,8 @@ function lowerr() {
     rightPop.classList.remove("hide")
     higher.classList.add("hide")
     lowerBtn.classList.add("hide")
+    rightQues.textContent = arrayOfCountries[rndm2].name;
+    leftQues.textContent = arrayOfCountries[rndm].name;
     scoreColor();
     scoreCheck();
 }
@@ -132,16 +144,21 @@ function scoreCheck(){
     if(score==5){
         window.alert("You Win !");
         location.reload();
+        topQues.classList.add("hide")
+        bottomQues.classList.add("hide")
+        bottomBox.classList.add("whitebg")
+        
     }
-    if(score==-2){
+    if(score==-3){
         window.alert("You lose :(");
         location.reload();
+        topQues.classList.add("hide")
+        bottomQues.classList.add("hide")
+        bottomBox.classList.add("whitebg")
     }
 }
 function nextt() {
-    resultText.classList.add("hide");
     resultVal.textContent = "";
-    // resultText.textContent = "";
     higherBtn.classList.remove("hide")
     lowerBtn.classList.remove("hide")
     nextBtn.classList.add("hide")
@@ -158,6 +175,8 @@ function nextt() {
     console.log(rndm2)
     rightPop.textContent = popu2.toLocaleString('en-US');
     rightImg.src = arrayOfCountries[rndm2].flag;
+    rightQues.textContent = arrayOfCountries[rndm2].name;
+    leftQues.textContent = arrayOfCountries[rndm].name;
     
 }
 
