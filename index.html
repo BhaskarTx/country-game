@@ -15,6 +15,8 @@
 <body>
     <div class="topcontainer">
         <h1 class="heading">IsPopulation ? Higher : Lower </h1>
+        <p class="centerr">Score more than 5 to <span class="lightt">WIN !</span>  
+            A score less than -1 will make you <span class="lightt">Lose :(</span> </p>
         <div class="top hide">
             <h2>Round Number : <span class="roundNumb"></span></h2>
             <h2>Your Score : <span class="scoreVal"></span></h2>
@@ -22,16 +24,32 @@
     </div>
     <div class="container">
         <div class="leftBox box">
-            <img src="" alt="" id="Limg" class="imagee hide">
-            <h2 id="leftTitle" class="darks"></h2>
-            <p id="Lpopulation"></p>
+            <ul class="listtt">
+                <li class="lists">
+                    <img src="" alt="" id="Limg" class="imagee hide">
+                </li>
+                <li class="lists">
+                    <h2 id="leftTitle" ></h2>
+                </li>
+                <li class="lists">
+                    <p id="Lpopulation" class="darks boldd"></p>
+                </li>
+            </ul>
 
         </div>
 
         <div class="rightBox box">
-            <img src="" alt="" id="Rimg" class="imagee hide">
-            <h2 id="rightTitle" class="darks"></h2>
-            <p id="Rpopulation"></p>
+            <ul>
+                <li class="lists">
+                    <img src="" alt="" id="Rimg" class="imagee hide">
+                </li>
+                <li class="lists">
+                    <h2 id="rightTitle" class="darks"></h2>
+                </li>
+                <li class="lists">
+                    <p id="Rpopulation"></p>
+                </li>
+            </ul>
         </div>
 
     </div>
@@ -44,7 +62,11 @@
         <button class="btn hide" id="next">Next</button>
     </div>
 
-
+<!-- <footer>
+    <div class="foot">
+        All Rights Reserved @ionBain
+    </div>
+</footer> -->
     <script src="script.js"></script>
 </body>
 

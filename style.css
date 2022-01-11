@@ -22,16 +22,23 @@
 .heading{
     color: var(--pLight);
     text-align: center;
+    font-size: 2.5rem;
 }
 
 
 
-
+.centerr{
+    text-align: center;
+    padding: .8rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    
+}
 
 .container {
     display: flex;
    
-height: 300px;
+height: 450px;
 
 }
 .box {
@@ -47,14 +54,26 @@ height: 300px;
 }
 .leftbox {
     background-color: aqua;
-
+    border-right: 2px solid #333;
+    
 }
 
 .rightbox {
     background-color: chocolate;
+    border-left: 2px solid #333;
 }
 
-
+.container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.lists{
+    text-align: center;
+    /* text-decoration: none; */
+    padding: .5rem;
+    margin: .5rem;
+}
 
 
 
@@ -105,3 +124,22 @@ btn:after{background-color:rgb(247, 115, 54)}
 .darks{
     color: var(--pDark);
 }
+.boldd{
+    font-style: bold;
+    font-size: 3rem;
+}
+.lightt{
+    color:var(--pLight) ;
+    font-style: italic;
+}
+
+
+/* .foot{
+    max-height: 200px;
+    background-color: var(--pdark);
+    color: var(--pmain);
+    border: 2px solid red;
+    text-align: center;
+    font-size: 2rem;
+    padding: 4rem;
+} */

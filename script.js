@@ -102,6 +102,7 @@ function highh() {
     higherBtn.classList.add("hide")
     lowerBtn.classList.add("hide")
     scoreColor();
+    scoreCheck();
     
 }
 
@@ -125,8 +126,18 @@ function lowerr() {
     higher.classList.add("hide")
     lowerBtn.classList.add("hide")
     scoreColor();
+    scoreCheck();
 }
-
+function scoreCheck(){
+    if(score==5){
+        window.alert("You Win !");
+        location.reload();
+    }
+    if(score==-2){
+        window.alert("You lose :(");
+        location.reload();
+    }
+}
 function nextt() {
     resultText.classList.add("hide");
     resultVal.textContent = "";
