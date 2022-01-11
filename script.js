@@ -92,7 +92,9 @@ function scoreColor(){
 }
 
 function highh() {
-
+    
+    topQues.classList.add("hide")
+    bottomQues.classList.add("hide")
     nextBtn.classList.remove("hide")
     resultVal.classList.remove("hide")
     if (popu2 > popu1) {
@@ -118,6 +120,8 @@ function highh() {
 }
 
 function lowerr() {
+    topQues.classList.add("hide")
+    bottomQues.classList.add("hide")
     nextBtn.classList.remove("hide")
     resultVal.classList.remove("hide")
     if (popu2 < popu1) {
@@ -158,6 +162,8 @@ function scoreCheck(){
     }
 }
 function nextt() {
+    topQues.classList.remove("hide")
+    bottomQues.classList.remove("hide")
     resultVal.textContent = "";
     higherBtn.classList.remove("hide")
     lowerBtn.classList.remove("hide")
