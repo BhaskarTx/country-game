@@ -191,7 +191,6 @@ higherBtn.addEventListener("click", highh);
 lowerBtn.addEventListener("click", lowerr);
 nextBtn.addEventListener("click", nextt)
 
-
 fetch(serverURL).then(response => response.json())
     .then((data) => {
         // console.log(response);
